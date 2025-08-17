@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E6722E7-96AD-4667-8DE1-AB6AEB4F4D6B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>диплом</RootNamespace>
+    <AssemblyName>диплом</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Author.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Author.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExcelEX.cs" />
+    <Compile Include="OProgramme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OProgramme.Designer.cs">
+      <DependentUpon>OProgramme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkUser.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="EditTovar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTovar.Designer.cs">
+      <DependentUpon>EditTovar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_Filtration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_Filtration.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_NamePos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_NamePos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_ZanaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_ZanaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SpisokPostavshchikov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpisokPostavshchikov.Designer.cs">
+      <DependentUpon>SpisokPostavshchikov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_Product.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_Product.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_Provider.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_Provider.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_ZanaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_ZanaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Klevyy_ZanaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Klevyy_ZanaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ME.Designer.cs">
+      <DependentUpon>ME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EditPostavshchikov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPostavshchikov.Designer.cs">
+      <DependentUpon>EditPostavshchikov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpisokTovarov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpisokTovarov.Designer.cs">
+      <DependentUpon>SpisokTovarov.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordExporter.cs" />
+    <EmbeddedResource Include="Author.resx">
+      <DependentUpon>Author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OProgramme.resx">
+      <DependentUpon>OProgramme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTovar.resx">
+      <DependentUpon>EditTovar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpisokPostavshchikov.resx">
+      <DependentUpon>SpisokPostavshchikov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ME.resx">
+      <DependentUpon>ME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EditPostavshchikov.resx">
+      <DependentUpon>EditPostavshchikov.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpisokTovarov.resx">
+      <DependentUpon>SpisokTovarov.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Klevyy_Filtration.xsc">
+      <DependentUpon>Klevyy_Filtration.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_Filtration.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_Filtration.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_Filtration.xss">
+      <DependentUpon>Klevyy_Filtration.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_NamePos.xsc">
+      <DependentUpon>Klevyy_NamePos.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_NamePos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_NamePos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_NamePos.xss">
+      <DependentUpon>Klevyy_NamePos.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_Product.xsc">
+      <DependentUpon>Klevyy_Product.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_Product.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_Product.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_Product.xss">
+      <DependentUpon>Klevyy_Product.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_Provider.xsc">
+      <DependentUpon>Klevyy_Provider.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_Provider.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_Provider.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_Provider.xss">
+      <DependentUpon>Klevyy_Provider.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_ZanaDataSet.xsc">
+      <DependentUpon>Klevyy_ZanaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_ZanaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_ZanaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_ZanaDataSet.xss">
+      <DependentUpon>Klevyy_ZanaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_ZanaDataSet1.xsc">
+      <DependentUpon>Klevyy_ZanaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_ZanaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_ZanaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_ZanaDataSet1.xss">
+      <DependentUpon>Klevyy_ZanaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_ZanaDataSet2.xsc">
+      <DependentUpon>Klevyy_ZanaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Klevyy_ZanaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Klevyy_ZanaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Klevyy_ZanaDataSet2.xss">
+      <DependentUpon>Klevyy_ZanaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
